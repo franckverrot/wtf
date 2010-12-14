@@ -7,7 +7,6 @@ module Wtf
 
     include Dsl
 
-    attr_accessor :_scm, :_tracker
     include Scm     #FIXME:put that in the Dsl module
     include Tracker #FIXME:put that in the Dsl module
     include Topics  #FIXME:put that in the Dsl module
@@ -24,13 +23,41 @@ module Wtf
     end
 
     def help *args
-      puts "wtf, work the flow, your favorite workflow tool"
-      puts "Root dir: #{self.root_dir}"
-      puts "args: #{args.inspect}"
+      banner
+      usage
     end
 
-    def self.method_missing *args
-      puts "CLASS METHOD MISSING #{args.inspect}"
+    def banner
+      puts """
+      wtf, work the flow, your favorite workflow tool
+      Current root directory: #{self.root_dir}
+      """
+    end
+
+    def usage
+      puts """
+      Usage: wtf command [action] [options]
+
+      Commands are:
+      * feature
+      * bug
+      * chore
+      * hotfix
+      * release
+
+      Actions are:
+      * start
+      * finish
+      * publish
+
+      Please use the man-files to get more details on these commands (eg: man wtf-release)
+      """
+    end
+
+    def method_missing *args
+      banner
+      puts "Unknown action #{args.shift}, arguments => #{args.flatten.inspect}"
+      usage
     end
 
 
