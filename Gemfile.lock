@@ -3,15 +3,18 @@ PATH
   specs:
     wtf (0.0.1)
       activesupport
+      i18n
 
 GEM
   remote: http://rubygems.org/
   specs:
     activesupport (3.0.3)
+    i18n (0.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activesupport
+  i18n
   wtf!
