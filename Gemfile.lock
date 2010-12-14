@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    wtf (0.0.1)
+      activesupport
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (3.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  wtf!

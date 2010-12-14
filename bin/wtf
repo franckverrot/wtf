@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+$:.push 'lib'
+require 'wtf'
+require 'wtf/helpers'
+
+args = ARGV.dup
+ARGV.clear
+command = args.shift.strip rescue 'help'
+
+root_dir = Wtf::Helpers.root_directory(`pwd`)
+wtf = Wtf::Wtf.new(root_dir)
+wtf.load(ENV.fetch('WTF_CONFIGURATION','.wtf.rb'))
+wtf.send(command, args)
