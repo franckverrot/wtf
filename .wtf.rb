@@ -1,7 +1,7 @@
 Wtf::Wtf.configure do
   scm :git # Extend for Hg, Subversion, etc..
 
-  tracker :pivotaltracker, :project_id => 123456 
+  tracker :pivotal_tracker, :project_id => 123456 
   # we should use: https://github.com/hybridgroup/ticketmaster
 
   development_branch :development

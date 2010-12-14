@@ -2,6 +2,7 @@ Dir["#{File.dirname(__FILE__)}/commands/*.rb"].each { |c| require c }
 
 module Wtf
   class Wtf
+    extend Dsl
     attr_accessor :root_dir
     attr_accessor :configuration_file
 
@@ -32,7 +33,9 @@ module Wtf
     def process_dsl
       path = File.join(self.root_dir, self.configuration_file)
       puts "Using the configuration file #{path}"
-      eval(File.read(path), TOPLEVEL_BINDING)
+      class_eval do
+        eval(File.read(path), TOPLEVEL_BINDING)
+      end
     end
 
   end
