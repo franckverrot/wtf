@@ -73,6 +73,11 @@ Wtf::Wtf.configure do
     deliver :ticket do
     end
 
+		update do |branch|
+			# Loop over all branches and git pull --rebase them.
+			# Helpful during mid-development to keep everything close against origin.
+		end
+	
   end
 
   roles do
