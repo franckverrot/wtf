@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Franck Verrot", "Richard K. Michael"]
   s.email       = ["franck@verrot.fr"]
   s.homepage    = "http://github.com/cesario/wtf"
-  s.summary     = %q{DSL configurable DVCS worflow}
+  s.summary     = %q{DSL configurable DVCS workflow}
   s.description = %q{wtf makes it very easy to define your own workflow and tools (SCM, ticket manager, ...)}
 
   s.rubyforge_project = "wtf"
