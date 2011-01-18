@@ -1,7 +1,8 @@
-Wtf - Work The Flow
-===================
+# Wtf - Work The Flow
 
 Experimental workflow tool.
+
+## What is it?
 
 The DSL that `wtf` exposes should cover most of the usage companies and
 individuals have in their development process.
